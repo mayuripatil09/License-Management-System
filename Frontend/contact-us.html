@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - License Management System</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚖
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#process">
+                How It Works
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='login.html'"
+            >
+                Login
+            </button>
+
+            <button
+                class="register-btn"
+                onclick="window.location.href='register.html'"
+            >
+                Register
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CONTACT PAGE
+    ========================================== -->
+
+    <main class="contact-page">
+
+        <div class="contact-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="contact-heading">
+
+                <p class="hero-small-title">
+                    GET IN TOUCH
+                </p>
+
+                <h1>
+                    We're Here to
+                    <span>Help.</span>
+                </h1>
+
+                <p>
+                    Have a question about your license application?
+                    Send us a message and our support team will
+                    help you with your query.
+                </p>
+
+            </div>
+
+
+
+            <!-- Contact Content -->
+
+            <div class="contact-grid">
+
+
+                <!-- =================================
+                     CONTACT INFORMATION
+                ================================== -->
+
+                <div class="contact-info">
+
+                    <p class="contact-label">
+                        CONTACT INFORMATION
+                    </p>
+
+                    <h2>
+                        Let's Connect.
+                    </h2>
+
+                    <p class="contact-description">
+                        Whether you need help with an application,
+                        tracking your license, or using the LMS
+                        platform, we're here to assist you.
+                    </p>
+
+
+                    <!-- Email -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                support@lms.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                +91 1800 123 4567
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Working Hours -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Support Hours
+                            </span>
+
+                            <strong>
+                                Monday - Friday, 9 AM - 6 PM
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Office
+                            </span>
+
+                            <strong>
+                                License Management Support Center
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     CONTACT FORM
+                ================================== -->
+
+                <div class="contact-card">
+
+                    <div class="form-heading">
+
+                        <p>
+                            SEND A MESSAGE
+                        </p>
+
+                        <h2>
+                            Contact Us
+                        </h2>
+
+                        <span>
+                            Fill in the details below and we'll
+                            get back to you.
+                        </span>
+
+                    </div>
+
+
+                    <form id="contactForm">
+
+
+                        <!-- Name -->
+
+                        <div class="input-group">
+
+                            <label for="contactName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="input-group">
+
+                            <label for="contactEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Subject -->
+
+                        <div class="input-group">
+
+                            <label for="contactSubject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactSubject"
+                                placeholder="Enter your subject"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <div class="input-group">
+
+                            <label for="contactMessage">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                rows="5"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="register-submit"
+                        >
+                            Send Message →
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

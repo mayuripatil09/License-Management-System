@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Application - License Management System</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚖
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="track-application.html">
+                My Applications
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='index.html'"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         TRACK APPLICATION PAGE
+    ========================================== -->
+
+    <main class="track-page">
+
+        <div class="track-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="track-heading">
+
+                <p class="hero-small-title">
+                    APPLICATION STATUS
+                </p>
+
+                <h1>
+                    Track Your
+                    <span>Application.</span>
+                </h1>
+
+                <p>
+                    View your submitted license applications
+                    and check their current status.
+                </p>
+
+            </div>
+
+
+
+            <!-- Search Application -->
+
+            <div class="track-search-card">
+
+                <div class="track-search-heading">
+
+                    <div class="track-search-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Find Your Application
+                        </h2>
+
+                        <p>
+                            Enter your application ID to check
+                            your application status.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Search Form -->
+
+                <form
+                    id="trackForm"
+                    class="track-search-form"
+                   action="http://localhost:8080/lms/track"
+                    method="get"
+                >
+
+                    <input
+                        type="text"
+                        id="applicationId"
+                        name="applicationId"
+                        placeholder="Enter Application ID e.g. LMS-2026-0001"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Track Application →
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- Empty State -->
+
+            <div class="track-empty">
+
+                <div class="track-empty-icon">
+
+                    <i class="fa-solid fa-file-circle-question"></i>
+
+                </div>
+
+                <h2>
+                    Track Your Application
+                </h2>
+
+                <p>
+                    Enter your application ID above to
+                    view your application details and status.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+</body>
+
+</html>

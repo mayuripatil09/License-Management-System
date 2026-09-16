@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for License - License Management System</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚖
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="my-applications">
+                My Applications
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='index.html'"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         APPLICATION PAGE
+    ========================================== -->
+
+    <main class="application-page">
+
+        <div class="application-container">
+
+
+            <!-- Page Heading -->
+
+            <div class="application-heading">
+
+                <p class="hero-small-title">
+                    LICENSE APPLICATION
+                </p>
+
+                <h1>
+                    Apply for Your
+                    <span>License.</span>
+                </h1>
+
+                <p>
+                    Complete the form below with your personal
+                    and license details to submit your application.
+                </p>
+
+            </div>
+
+
+
+            <!-- Application Form -->
+
+            <div class="application-card">
+
+                <div class="form-heading">
+
+                    <p>
+                        APPLICATION FORM
+                    </p>
+
+                    <h2>
+                        License Details
+                    </h2>
+
+                    <span>
+                        Please provide accurate information.
+                    </span>
+
+                </div>
+
+
+                <form
+                    id="applicationForm"
+                    action="http://localhost:8080/lms/apply"
+                    method="post"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <!-- =================================
+                         PERSONAL INFORMATION
+                    ================================== -->
+
+                    <div class="form-section-title">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>
+                            Personal Information
+                        </span>
+
+                    </div>
+
+
+                    <!-- Full Name -->
+
+                    <div class="input-group">
+
+                        <label for="appFullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="appFullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Date of Birth + License Type -->
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+
+                            <label for="dob">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dob"
+                                name="dob"
+                                required
+                            >
+
+                            <p
+                                id="ageError"
+                                class="age-error"
+                            >
+                                You are not eligible.
+                                Minimum age required is 18.
+                            </p>
+
+                        </div>
+
+
+                        <!-- License Type -->
+
+                        <div class="input-group">
+
+                            <label for="licenseType">
+                                License Type
+                            </label>
+
+                            <select
+                                id="licenseType"
+                                name="licenseType"
+                                required
+                            >
+
+                                <option value="">
+                                    Select license type
+                                </option>
+
+                                <option value="Driving License">
+                                    Driving License
+                                </option>
+
+                                <option value="Business License">
+                                    Business License
+                                </option>
+
+                                <option value="Trade License">
+                                    Trade License
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="input-group">
+
+                        <label for="address">
+                            Address
+                        </label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            placeholder="Enter your complete address"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- =================================
+                         PHOTO UPLOAD
+                    ================================== -->
+
+                    <div class="input-group">
+
+                        <label for="photo">
+                            Passport Size Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept=".jpg,.jpeg,.png"
+                            required
+                        >
+
+                        <small class="file-help">
+                            Upload JPG, JPEG or PNG image.
+                        </small>
+
+                    </div>
+
+
+                    <!-- =================================
+                         AADHAAR UPLOAD
+                    ================================== -->
+
+                    <div class="input-group">
+
+                        <label for="aadhaar">
+                            Aadhaar Card
+                        </label>
+
+                        <input
+                            type="file"
+                            id="aadhaar"
+                            name="aadhaar"
+                            accept=".jpg,.jpeg,.png,.pdf"
+                            required
+                        >
+
+                        <small class="file-help">
+                            Upload Aadhaar card as JPG, PNG or PDF.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         DECLARATION
+                    ================================== -->
+
+                    <div class="form-section-title">
+
+                        <i class="fa-solid fa-file-signature"></i>
+
+                        <span>
+                            Declaration
+                        </span>
+
+                    </div>
+
+
+                    <div class="application-declaration">
+
+                        <input
+                            type="checkbox"
+                            id="declaration"
+                            name="declaration"
+                            required
+                        >
+
+                        <label for="declaration">
+
+                            I confirm that the information provided
+                            in this application is accurate and complete.
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SUBMIT BUTTON
+                    ================================== -->
+
+                    <button
+                        type="submit"
+                        class="register-submit application-submit"
+                    >
+
+                        Submit Application →
+
+                    </button>
+
+
+                    <!-- =================================
+                         CANCEL BUTTON
+                    ================================== -->
+
+                    <button
+                        type="button"
+                        class="secondary-btn application-cancel"
+                        onclick="window.location.href='user-dashboard.html'"
+                    >
+
+                        Cancel
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+    <script src="script.js?v=20260915"></script>">
+
+</body>
+
+</html>

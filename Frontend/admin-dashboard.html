@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin Dashboard - License Management System
+    </title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="admin-applications">
+                Applications
+            </a>
+
+            <a href="admin-users">
+                Users
+            </a>
+
+            <a href="admin-profile">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='index.html'"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         ADMIN DASHBOARD
+    ========================================== -->
+
+    <main class="admin-dashboard-page">
+
+
+        <!-- Dashboard Heading -->
+
+        <section class="admin-dashboard-header">
+
+            <p class="admin-small-title">
+                ADMINISTRATION
+            </p>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Manage license applications and registered users
+                from one place.
+            </p>
+
+        </section>
+
+
+        <!-- Dashboard Cards -->
+
+        <section class="admin-dashboard-grid">
+
+
+            <!-- =================================
+                 APPLICATIONS
+            ================================== -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <h2>
+                    Applications
+                </h2>
+
+                <p>
+                    View and manage license applications submitted
+                    by users.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='admin-applications'"
+                >
+                    View Applications →
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 USERS
+            ================================== -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h2>
+                    Manage Users
+                </h2>
+
+                <p>
+                    View registered users and manage their accounts.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    onclick="window.location.href='admin-users'"
+                >
+                    Manage Users →
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 ADMIN PROFILE
+            ================================== -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h2>
+                    Admin Profile
+                </h2>
+
+                <p>
+                    View and manage administrator account details.
+                </p>
+
+                <button
+                    class="secondary-btn"
+                    onclick="window.location.href='admin-profile'"
+                >
+                    View Profile →
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 LOGOUT
+            ================================== -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-icon">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                </div>
+
+                <h2>
+                    Logout
+                </h2>
+
+                <p>
+                    Securely exit the administrator dashboard.
+                </p>
+
+                <button
+                    class="secondary-btn"
+                    onclick="window.location.href='index.html'"
+                >
+                    Logout →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+
+        All rights reserved.
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

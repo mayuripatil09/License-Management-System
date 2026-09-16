@@ -1,0 +1,29 @@
+# Java compiled files
+*.class
+
+# Backend compiled output
+Backend/out/
+
+# IDE files
+.vscode/
+.idea/
+
+# Tomcat generated files
+**/logs/
+**/temp/
+**/work/
+
+# Uploaded documents
+lms_uploads/
+*.jpg
+*.jpeg
+*.png
+*.pdf
+
+# Local configuration / secrets
+.env
+*.properties
+
+# OS files
+.DS_Store
+Thumbs.db

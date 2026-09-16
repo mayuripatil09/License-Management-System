@@ -1,0 +1,665 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+
+<%
+    String applicationNumber =
+            (String) request.getAttribute("applicationNumber");
+
+    String fullName =
+            (String) request.getAttribute("fullName");
+
+    String dob =
+            (String) request.getAttribute("dob");
+
+    String licenseType =
+            (String) request.getAttribute("licenseType");
+
+    String applicationDate =
+            (String) request.getAttribute("applicationDate");
+
+    String address =
+            (String) request.getAttribute("address");
+
+    String status =
+            (String) request.getAttribute("status");
+
+    String statusClass = "pending";
+
+    if ("APPROVED".equalsIgnoreCase(status)) {
+        statusClass = "approved";
+    } else if ("REJECTED".equalsIgnoreCase(status)) {
+        statusClass = "rejected";
+    }
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Application Details - Admin |
+        License Management System
+    </title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="admin-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="http://localhost:8080/lms/admin-applications">
+                Applications
+            </a>
+
+            <a href="admin-users">
+                Users
+            </a>
+
+            <a href="admin-profile">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='index.html'"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         APPLICATION DETAILS
+    ========================================== -->
+
+    <main class="admin-application-details-page">
+
+
+        <!-- Page Header -->
+
+        <section class="application-details-header">
+
+            <p class="admin-small-title">
+                APPLICATION REVIEW
+            </p>
+
+            <h1>
+                Application Details
+            </h1>
+
+            <p>
+                Review the applicant information and
+                application documents before making a decision.
+            </p>
+
+        </section>
+
+
+
+        <!-- Application Card -->
+
+        <section class="application-details-card">
+
+
+            <!-- =====================================
+                 APPLICATION TOP
+            ====================================== -->
+
+            <div class="application-details-top">
+
+                <div>
+
+                    <span class="details-label">
+                        APPLICATION ID
+                    </span>
+
+                    <h2>
+                        <%= applicationNumber %>
+                    </h2>
+
+                </div>
+
+
+                <span class="application-status <%= statusClass %>">
+
+                    <%= status %>
+
+                </span>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 APPLICANT INFORMATION
+            ====================================== -->
+
+            <div class="details-section">
+
+                <h3>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Applicant Information
+
+                </h3>
+
+
+                <div class="details-grid">
+
+
+                    <!-- Full Name -->
+
+                    <div class="detail-item">
+
+                        <span>
+                            Full Name
+                        </span>
+
+                        <strong>
+                            <%= fullName %>
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Date of Birth -->
+
+                    <div class="detail-item">
+
+                        <span>
+                            Date of Birth
+                        </span>
+
+                        <strong>
+                            <%= dob %>
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- License Type -->
+
+                    <div class="detail-item">
+
+                        <span>
+                            License Type
+                        </span>
+
+                        <strong>
+                            <%= licenseType %>
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Application Date -->
+
+                    <div class="detail-item">
+
+                        <span>
+                            Application Date
+                        </span>
+
+                        <strong>
+                            <%= applicationDate %>
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Address -->
+
+                    <div class="detail-item detail-full">
+
+                        <span>
+                            Address
+                        </span>
+
+                        <strong>
+                            <%= address %>
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 DOCUMENTS
+            ====================================== -->
+
+            <div class="details-section">
+
+                <h3>
+
+                    <i class="fa-solid fa-file"></i>
+
+                    Submitted Documents
+
+                </h3>
+
+
+                <div class="documents-grid">
+
+
+                    <!-- Applicant Photo -->
+
+                    <div class="document-card">
+
+                        <div class="document-icon">
+
+                            <i class="fa-solid fa-image"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Applicant Photo
+                            </strong>
+
+                            <p>
+                                Photo submitted by applicant
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="document-view-btn"
+                            type="button"
+                            onclick="alert('Document viewing will be connected next.')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Aadhaar -->
+
+                    <div class="document-card">
+
+                        <div class="document-icon">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Aadhaar Document
+                            </strong>
+
+                            <p>
+                                Identity document submitted
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="document-view-btn"
+                            type="button"
+                            onclick="alert('Document viewing will be connected next.')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 ADMIN DECISION
+            ====================================== -->
+
+            <!-- =====================================
+     ADMIN DECISION
+====================================== -->
+
+<div class="details-section admin-decision-section">
+
+    <h3>
+        <i class="fa-solid fa-gavel"></i>
+        Application Decision
+    </h3>
+
+    <p class="decision-description">
+        Review all submitted information before
+        approving or rejecting this application.
+    </p>
+
+    <div class="decision-buttons">
+
+        <%
+            if ("PENDING".equalsIgnoreCase(status)) {
+        %>
+
+            <!-- APPROVE -->
+
+            <form
+                action="admin-application-decision"
+                method="post"
+                style="display:inline;"
+            >
+
+                <input
+                    type="hidden"
+                    name="applicationId"
+                    value="<%= applicationNumber %>"
+                >
+
+                <input
+                    type="hidden"
+                    name="decision"
+                    value="APPROVE"
+                >
+
+                <button
+                    type="submit"
+                    class="approve-btn"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Approve Application
+                </button>
+
+            </form>
+
+
+            <!-- REJECT -->
+
+            <form
+                action="admin-application-decision"
+                method="post"
+                style="display:inline;"
+            >
+
+                <input
+                    type="hidden"
+                    name="applicationId"
+                    value="<%= applicationNumber %>"
+                >
+
+                <input
+                    type="hidden"
+                    name="decision"
+                    value="REJECT"
+                >
+
+                <button
+                    type="submit"
+                    class="reject-btn"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                    Reject Application
+                </button>
+
+            </form>
+
+        <%
+            } else if ("APPROVED".equalsIgnoreCase(status)) {
+        %>
+
+            <!-- APPROVED -->
+
+            <div class="decision-message approved-message">
+                <i class="fa-solid fa-circle-check"></i>
+                Application Approved
+            </div>
+
+        <%
+            } else if ("REJECTED".equalsIgnoreCase(status)) {
+        %>
+
+            <!-- REJECTED -->
+
+            <div class="decision-message rejected-message">
+                <i class="fa-solid fa-circle-xmark"></i>
+                Application Rejected
+            </div>
+
+        <%
+            }
+        %>
+
+    </div>
+
+</div>
+
+                        <!-- =============================
+                             APPROVE FORM
+                        ============================== -->
+
+                        <form
+                            action="admin-application-decision"
+                            method="post"
+                            style="display:inline;"
+                        >
+
+                            <input
+                                type="hidden"
+                                name="applicationId"
+                                value="<%= applicationNumber %>"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="decision"
+                                value="APPROVE"
+                            >
+
+
+                            <button
+                                type="submit"
+                                class="approve-btn"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Approve Application
+
+                            </button>
+
+                        </form>
+
+
+
+                        <!-- =============================
+                             REJECT FORM
+                        ============================== -->
+
+                        <form
+                            action="admin-application-decision"
+                            method="post"
+                            style="display:inline;"
+                        >
+
+                            <input
+                                type="hidden"
+                                name="applicationId"
+                                value="<%= applicationNumber %>"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="decision"
+                                value="REJECT"
+                            >
+
+
+                            <button
+                                type="submit"
+                                class="reject-btn"
+                            >
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                                Reject Application
+
+                            </button>
+
+                        </form>
+
+
+                    <%
+                        } else if ("APPROVED".equalsIgnoreCase(status)) {
+                    %>
+
+
+                        <!-- =============================
+                             APPROVED MESSAGE
+                        ============================== -->
+
+                        <div class="decision-message approved-message">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Application Approved
+
+                        </div>
+
+
+                    <%
+                        } else if ("REJECTED".equalsIgnoreCase(status)) {
+                    %>
+
+
+                        <!-- =============================
+                             REJECTED MESSAGE
+                        ============================== -->
+
+                        <div class="decision-message rejected-message">
+
+                            <i class="fa-solid fa-circle-xmark"></i>
+
+                            Application Rejected
+
+                        </div>
+
+
+                    <%
+                        }
+                    %>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BACK BUTTON
+            ====================================== -->
+
+            <div class="details-back">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    onclick="window.location.href='http://localhost:8080/lms/admin-applications'"
+                >
+
+                    ← Back to Applications
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard - License Management System</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚖
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="user-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="my-applications">
+                My Applications
+            </a>
+            <a href="user-profile">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='index.html'"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         USER DASHBOARD
+    ========================================== -->
+
+    <main class="dashboard-page">
+
+        <div class="dashboard-container">
+
+
+            <!-- =================================
+                 WELCOME HEADER
+            ================================== -->
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <p class="hero-small-title">
+                        USER DASHBOARD
+                    </p>
+
+                    <h1>
+                        Welcome Back,
+                        <span>User.</span>
+                    </h1>
+
+                    <p>
+                        Manage your license applications
+                        and track your application status.
+                    </p>
+
+                </div>
+
+
+                <!-- User Profile -->
+
+                <div class="dashboard-profile">
+
+                    <div class="profile-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            User
+                        </strong>
+
+                        <span>
+                            License Applicant
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 MAIN DASHBOARD OPTIONS
+            ================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================
+                     APPLY FOR LICENSE
+                ================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-file-signature"></i>
+
+                    </div>
+
+                    <p>
+                        LICENSE APPLICATION
+                    </p>
+
+                    <h2>
+                        Apply for a License
+                    </h2>
+
+                    <span>
+                        Submit a new license application
+                        and provide your required details.
+                    </span>
+
+                    <button
+                        class="primary-btn"
+                        onclick="window.location.href='apply-license.html'"
+                    >
+
+                        Apply Now →
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================
+                     TRACK APPLICATION
+                ================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+
+                    <p>
+                        APPLICATION STATUS
+                    </p>
+
+                    <h2>
+                        Track Application
+                    </h2>
+
+                    <span>
+                        Check the status of your submitted
+                        applications and see whether they
+                        are pending, approved or rejected.
+                    </span>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="window.location.href='track-application.html'"
+                    >
+
+                        Track Status →
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+</body>
+
+</html>

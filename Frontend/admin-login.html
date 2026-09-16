@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - License Management System</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ⚖
+            </div>
+
+            <div class="logo-text">
+
+                <h2>LMS</h2>
+
+                <p>
+                    License Management System
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#services">
+                Services
+            </a>
+
+            <a href="index.html#process">
+                How It Works
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='login.html'"
+            >
+                User Login
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         ADMIN LOGIN
+    ========================================== -->
+
+    <main class="admin-login-page">
+
+        <div class="admin-login-container">
+
+
+            <!-- Admin Login Card -->
+
+            <div class="admin-login-card">
+
+                <div class="form-heading">
+
+                    <p>
+                        ADMINISTRATOR LOGIN
+                    </p>
+
+                    <h2>
+                        Admin Login
+                    </h2>
+
+                    <span>
+                        Enter your administrator credentials.
+                    </span>
+
+                </div>
+
+
+                <!-- ADMIN LOGIN FORM -->
+
+                <form
+                    id="adminLoginForm"
+                    action="http://localhost:8080/lms/login"
+                    method="post"
+                >
+
+
+                    <!-- Username -->
+
+                    <div class="input-group">
+
+                        <label for="adminUsername">
+                            Admin Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminUsername"
+                            name="username"
+                            placeholder="Enter admin username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="adminPassword">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="adminPassword"
+                                name="password"
+                                placeholder="Enter admin password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="eye-button"
+                                onclick="togglePassword('adminPassword', this)"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Security Notice -->
+
+                    <div class="admin-security-notice">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            This area is restricted to authorized administrators.
+                        </span>
+
+                    </div>
+
+
+                    <!-- Login -->
+
+                    <button
+                        type="submit"
+                        class="register-submit"
+                    >
+                        Admin Login →
+                    </button>
+
+
+                    <!-- User Login -->
+
+                    <p class="login-text">
+
+                        Are you a user?
+
+                        <a href="login.html">
+                            User Login
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div class="copyright">
+
+        © 2026 License Management System.
+        All rights reserved.
+
+    </div>
+
+
+    <script >
+       
+function togglePassword(inputId, button) {
+
+    const passwordInput =
+        document.getElementById(inputId);
+
+    const icon =
+        button.querySelector("i");
+
+    if (passwordInput.type === "password") {
+
+        passwordInput.type = "text";
+
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+
+    } else {
+
+        passwordInput.type = "password";
+
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+
+    }
+}
+</script>
+    
+
+</body>
+
+</html>
